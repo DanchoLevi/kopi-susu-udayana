@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopi Susu Aren Udayana — Pesan Kopi & Pastry Online</title>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Konfigurasi Palet Warna Hijau Sage & Putih yang Segar -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#F4F7F4',
+              100: '#EDF3ED',
+              200: '#D6E3D7',
+              300: '#B4CBB6',
+              400: '#88AA8C',
+              500: '#5F7D63',
+              600: '#4B6850',
+              700: '#3B523F',
+              800: '#2E4232',
+              900: '#273B2B',
+              950: '#18261B',
+            },
+            wa: {
+              500: '#25D366',
+              600: '#1FB857',
+              700: '#199E49',
+            },
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 30px -10px rgba(39, 59, 43, 0.10)',
+            card: '0 4px 20px -2px rgba(39, 59, 43, 0.07)',
+            bar: '0 -8px 24px -6px rgba(39, 59, 43, 0.12)',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-sage-50 text-sage-900 font-sans antialiased selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
+
+  <!-- ===================================================================== -->
+  <!-- 1. BANNER PROMO STICKY & HEADER NAVIGASI                              -->
+  <!-- ===================================================================== -->
+  <div class="sticky top-0 z-40 shadow-sm">
+    <!-- Banner Promo Hijau Sage Gelap -->
+    <div class="bg-gradient-to-r from-sage-900 via-sage-800 to-sage-900 text-white px-4 py-2.5 text-center border-b border-sage-700/60">
+      <p class="text-xs sm:text-sm font-semibold tracking-wide flex items-center justify-center gap-2 flex-wrap">
+        <span class="inline-flex items-center justify-center bg-white text-sage-900 text-[10px] sm:text-xs font-bold uppercase px-2.5 py-0.5 rounded-full">
+          Diskon 10%
+        </span>
+        <span>PROMO HARI INI! Belanja minimal Rp50.000 otomatis dapat diskon 10%</span>
+      </p>
+    </div>
+
+    <!-- Navbar Putih Bersih -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-sage-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        <!-- Logo & Nama Brand -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-sage-600 text-white flex items-center justify-center shadow-sm group-hover:bg-sage-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+              <line x1="6" x2="6" y1="2" y2="4" />
+              <line x1="10" x2="10" y1="2" y2="4" />
+              <line x1="14" x2="14" y1="2" y2="4" />
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <span class="font-serif font-bold text-base sm:text-lg text-sage-900 block">
+              Kopi Susu Aren Udayana
+            </span>
+            <span class="text-[11px] text-sage-600 hidden sm:block">
+              Seduhan Segar &amp; Hangat Setiap Hari
+            </span>
+          </div>
+        </a>
+
+        <!-- Navigasi Kanan: Link Menu & Indikator Keranjang -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a
+            href="#katalog-menu"
+            class="hidden md:inline-block text-sm font-medium text-sage-700 hover:text-sage-900 px-3 py-2 rounded-xl hover:bg-sage-100 transition-colors"
+          >
+            Menu
+          </a>
+          <a
+            href="#keranjang-section"
+            class="relative inline-flex items-center gap-2 bg-sage-100 hover:bg-sage-200/70 text-sage-900 font-semibold text-sm px-3.5 py-2.5 rounded-xl border border-sage-200 transition-all"
+            aria-label="Lihat keranjang belanja"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sage-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+            </svg>
+            <span class="hidden sm:inline">Keranjang</span>
+            <span
+              id="nav-cart-badge"
+              class="inline-flex items-center justify-center min-w-[22px] h-[22px] px-1.5 text-xs font-bold rounded-full bg-sage-600 text-white"
+            >
+              0
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 2. HERO SECTION SEGAR & MINIMALIS                                     -->
+  <!-- ===================================================================== -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-white via-sage-50/70 to-sage-50 border-b border-sage-200/80">
+    <!-- Aksen Dekoratif Lembut -->
+    <div class="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-sage-200/50 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-sage-300/30 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Teks Sambutan -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-white border border-sage-200 text-sage-700 text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-sm mb-4">
+            <span class="w-2 h-2 rounded-full bg-wa-500"></span>
+            Buka Setiap Hari &bull; Pickup &amp; Delivery Instan
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sage-900 leading-tight mb-4">
+            Segarnya Racikan <span class="text-sage-600 italic">Kopi Susu Aren</span> Pilihan Barista
+          </h1>
+
+          <p class="text-sage-700/90 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed mb-6">
+            Perpaduan espresso Arabica pilihan, gula aren organik karamel, dan susu segar creamy. Pesan praktis dari HP, atur suhu, level gula, dan es sesuai selera Anda.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+            <a
+              href="#katalog-menu"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-soft transition-all"
+            >
+              <span>Lihat &amp; Pilih Menu</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14" />
+                <path d="m19 12-7 7-7-7" />
+              </svg>
+            </a>
+            <div class="inline-flex items-center gap-2 text-xs sm:text-sm text-sage-700 font-medium px-3 py-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-sage-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+              <span>Diskon 10% otomatis min. Rp50.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Kartu Highlight Estetik (Rasio 1:1) -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden bg-white p-2.5 shadow-soft border border-sage-200 max-w-sm mx-auto">
+            <div class="relative aspect-square w-full rounded-2xl overflow-hidden bg-sage-100">
+              <img
+                src="kopi-gula-aren.png"
+                alt="Kopi Susu Aren Signature Udayana"
+                class="w-full h-full object-cover object-center"
+                onerror="handleImageError(this, 'kopi-gula-aren.png')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-sage-950/65 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-xl p-3 flex items-center justify-between shadow-sm border border-sage-100">
+                <div>
+                  <p class="text-[11px] font-bold uppercase tracking-wider text-sage-600">Menu Terlaris</p>
+                  <p class="font-serif font-bold text-sm text-sage-900">Kopi Susu Aren Signature</p>
+                </div>
+                <span class="bg-sage-100 text-sage-900 font-bold text-sm px-3 py-1.5 rounded-lg border border-sage-200">
+                  Rp20.000
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. KONTEN UTAMA: KATALOG MENU (KIRI) & KERANJANG CHECKOUT (KANAN)     -->
+  <!-- ===================================================================== -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 pb-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+      <!-- ================================================================= -->
+      <!-- KOLOM KIRI: KATALOG MENU                                          -->
+      <!-- ================================================================= -->
+      <section id="katalog-menu" class="lg:col-span-7 scroll-mt-32">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-sage-600">Katalog Menu</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-sage-900 mt-1">
+              Pilihan Kopi &amp; Pastry Favorit
+            </h2>
+          </div>
+
+          <!-- Filter Kategori Ringkas -->
+          <div class="inline-flex bg-white p-1 rounded-xl border border-sage-200 shadow-xs self-start sm:self-auto" role="tablist" aria-label="Filter kategori menu">
+            <button
+              type="button"
+              data-filter="semua"
+              onclick="setCategoryFilter('semua')"
+              class="filter-btn px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-lg bg-sage-600 text-white transition-all"
+            >
+              Semua
+            </button>
+            <button
+              type="button"
+              data-filter="minuman"
+              onclick="setCategoryFilter('minuman')"
+              class="filter-btn px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-lg text-sage-700 hover:text-sage-900 transition-all"
+            >
+              Minuman
+            </button>
+            <button
+              type="button"
+              data-filter="pastry"
+              onclick="setCategoryFilter('pastry')"
+              class="filter-btn px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-lg text-sage-700 hover:text-sage-900 transition-all"
+            >
+              Pastry
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid Kartu Produk (Diisi via JavaScript) -->
+        <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-5"></div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- KOLOM KANAN: KERANJANG, RINGKASAN & FORM PEMESANAN                -->
+      <!-- ================================================================= -->
+      <aside id="keranjang-section" class="lg:col-span-5 lg:sticky lg:top-32 scroll-mt-32">
+        <div class="bg-white rounded-3xl shadow-soft border border-sage-200 overflow-hidden">
+          <!-- Header Keranjang -->
+          <div class="bg-sage-900 text-white px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sage-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                <path d="M3 6h18" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              <h2 class="font-serif text-lg font-bold">Keranjang Pesanan</h2>
+            </div>
+            <span id="cart-item-count-label" class="text-xs font-semibold bg-sage-800 text-sage-100 px-2.5 py-1 rounded-full border border-sage-700">
+              0 item
+            </span>
+          </div>
+
+          <div class="p-5 sm:p-6 space-y-5">
+            <!-- Indikator Status Promo Diskon 10% -->
+            <div id="promo-status-box" class="rounded-2xl p-3.5 bg-sage-100 border border-sage-200 transition-all">
+              <div class="flex items-start gap-2.5">
+                <div id="promo-icon" class="mt-0.5 text-sage-600 shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                    <path d="m15 9-6 6" />
+                    <path d="M9 9h.01" />
+                    <path d="M15 15h.01" />
+                  </svg>
+                </div>
+                <div class="w-full">
+                  <div class="flex items-center justify-between gap-2">
+                    <p id="promo-status-text" class="text-xs sm:text-sm font-medium text-sage-900">
+                      Tambah <span class="font-bold text-sage-700">Rp50.000</span> lagi untuk otomatis dapat <strong>Diskon 10%</strong>!
+                    </p>
+                    <span id="promo-active-badge" class="hidden shrink-0 bg-sage-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded-full">
+                      Aktif
+                    </span>
+                  </div>
+                  <!-- Progress Bar Promo -->
+                  <div class="w-full h-2 bg-sage-200 rounded-full overflow-hidden mt-2">
+                    <div id="promo-progress-bar" class="h-full bg-sage-500 rounded-full transition-all duration-300" style="width: 0%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Daftar Item di Keranjang -->
+            <div id="cart-items-container" class="space-y-3 max-h-[320px] overflow-y-auto pr-1">
+              <!-- Diisi via JavaScript -->
+            </div>
+
+            <!-- Ringkasan Harga -->
+            <div class="border-t border-dashed border-sage-300 pt-4 space-y-2 text-sm">
+              <div class="flex items-center justify-between text-sage-700">
+                <span>Subtotal</span>
+                <span id="summary-subtotal" class="font-semibold text-sage-900">Rp0</span>
+              </div>
+
+              <div id="summary-discount-row" class="hidden items-center justify-between text-sage-600">
+                <span class="inline-flex items-center gap-1.5 font-semibold">
+                  <span>Diskon Promo (10%)</span>
+                </span>
+                <span id="summary-discount" class="font-bold">-Rp0</span>
+              </div>
+
+              <div class="flex items-center justify-between text-sage-700">
+                <span>Biaya Layanan</span>
+                <span id="summary-service-fee" class="font-semibold text-sage-900">Rp0</span>
+              </div>
+
+              <div class="border-t border-sage-200 pt-3 mt-2 flex items-center justify-between">
+                <div>
+                  <span class="font-bold text-base text-sage-900 block">Total Estimasi</span>
+                  <span class="text-[11px] text-sage-600">Belum termasuk ongkir (jika diantar)</span>
+                </div>
+                <span id="summary-total" class="font-serif font-bold text-xl text-sage-900">Rp0</span>
+              </div>
+            </div>
+
+            <!-- ============================================================= -->
+            <!-- FORM DATA PEMESAN                                             -->
+            <!-- ============================================================= -->
+            <form id="checkout-form" class="border-t border-sage-200 pt-5 space-y-4 scroll-mt-32" novalidate>
+              <h3 class="font-serif font-bold text-base text-sage-900">Data Pemesan</h3>
+
+              <!-- Input Nama Pemesan -->
+              <div>
+                <label for="customer-name" class="block text-xs font-semibold text-sage-800 mb-1.5">
+                  Nama Pemesan <span class="text-red-600">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="customer-name"
+                  name="customerName"
+                  placeholder="Contoh: Budi Santoso"
+                  class="w-full px-4 py-3 rounded-xl bg-sage-50 border border-sage-200 text-sm text-sage-900 placeholder:text-sage-500/70 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-all"
+                  required
+                />
+                <p id="error-name" class="hidden text-xs text-red-600 font-medium mt-1.5"></p>
+              </div>
+
+              <!-- Metode Pengambilan -->
+              <div>
+                <span class="block text-xs font-semibold text-sage-800 mb-1.5">
+                  Metode Pengambilan <span class="text-red-600">*</span>
+                </span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="deliveryMethod"
+                      value="Pickup di Toko"
+                      checked
+                      class="peer sr-only"
+                      onchange="toggleDeliveryAddress()"
+                    />
+                    <div class="p-3 rounded-xl border border-sage-200 bg-sage-50 peer-checked:bg-sage-600 peer-checked:text-white peer-checked:border-sage-600 transition-all text-center">
+                      <span class="block text-xs sm:text-sm font-semibold">Pickup di Toko</span>
+                      <span class="block text-[11px] opacity-80 mt-0.5">Ambil langsung</span>
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="deliveryMethod"
+                      value="Antar ke Rumah (GoSend / GrabSend)"
+                      class="peer sr-only"
+                      onchange="toggleDeliveryAddress()"
+                    />
+                    <div class="p-3 rounded-xl border border-sage-200 bg-sage-50 peer-checked:bg-sage-600 peer-checked:text-white peer-checked:border-sage-600 transition-all text-center">
+                      <span class="block text-xs sm:text-sm font-semibold">Antar ke Rumah</span>
+                      <span class="block text-[11px] opacity-80 mt-0.5">GoSend / GrabSend</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Kolom Alamat Lengkap & Patokan (Muncul otomatis jika pilih Antar ke Rumah) -->
+              <div id="address-wrapper" class="hidden space-y-2">
+                <label for="customer-address" class="block text-xs font-semibold text-sage-800">
+                  Alamat Lengkap &amp; Patokan <span class="text-red-600">*</span>
+                </label>
+                <textarea
+                  id="customer-address"
+                  name="customerAddress"
+                  rows="3"
+                  placeholder="Tulis alamat lengkap, nomor rumah/kos, serta patokan terdekat..."
+                  class="w-full px-4 py-3 rounded-xl bg-sage-50 border border-sage-200 text-sm text-sage-900 placeholder:text-sage-500/70 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-sage-500 transition-all resize-none"
+                ></textarea>
+                <p id="error-address" class="hidden text-xs text-red-600 font-medium"></p>
+
+                <!-- Catatan Lembut Ongkos Kirim -->
+                <div class="flex items-start gap-2 bg-sage-100 border border-sage-200 rounded-xl p-3 text-xs text-sage-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-sage-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 16v-4" />
+                    <path d="M12 8h.01" />
+                  </svg>
+                  <p class="leading-relaxed">
+                    Ongkos kirim akan dicek dan dikonfirmasi manual oleh admin melalui WhatsApp
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pesan Error Validasi Umum (Inline, Tanpa Alert Browser) -->
+              <div id="checkout-error-banner" class="hidden rounded-xl bg-red-50 border border-red-200 text-red-700 px-3.5 py-2.5 text-xs font-medium flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" x2="12" y1="8" y2="12" />
+                  <line x1="12" x2="12.01" y1="16" y2="16" />
+                </svg>
+                <span id="checkout-error-text">Mohon lengkapi data pesanan Anda.</span>
+              </div>
+
+              <!-- Tombol Utama Checkout WhatsApp (Desktop & Form) -->
+              <button
+                type="submit"
+                class="w-full inline-flex items-center justify-center gap-2.5 bg-wa-600 hover:bg-wa-700 active:scale-[0.99] text-white font-bold text-sm sm:text-base px-5 py-3.5 rounded-xl shadow-soft transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.391c1.453.797 3.094 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.438 1.344-2 1.422-.516.078-1.172.109-1.891-.125-.438-.141-1-.328-1.719-.641-3.031-1.313-5-4.375-5.156-4.578-.156-.203-1.234-1.641-1.234-3.125s.781-2.219 1.063-2.516c.281-.297.609-.375.813-.375h.578c.188 0 .438-.078.688.516.25.609.859 2.094.938 2.25.078.156.125.344.031.547-.094.203-.156.328-.313.5-.156.172-.328.391-.469.516-.156.156-.313.328-.141.641.188.313.813 1.344 1.75 2.172 1.203 1.078 2.219 1.406 2.531 1.563.313.156.5.125.688-.078.188-.203.781-.906.984-1.219.203-.313.422-.266.703-.156.281.109 1.797.844 2.109 1 .313.156.516.234.594.359.078.125.078.734-.172 1.438z"/>
+                </svg>
+                <span>Pesan via WhatsApp</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- 4. FOOTER RINGKAS (EXTRA PADDING BAWAH DI HP UNTUK STICKY BAR)        -->
+  <!-- ===================================================================== -->
+  <footer class="bg-sage-900 text-sage-200 border-t border-sage-800 pb-28 lg:pb-10 pt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <p class="font-serif font-bold text-lg text-white">Kopi Susu Aren Udayana</p>
+        <p class="text-xs text-sage-200/80 mt-1">Seduhan kopi pilihan &amp; pastry hangat setiap hari.</p>
+      </div>
+      <p class="text-xs text-sage-200/70">
+        &copy; <span id="footer-year"></span> Kopi Susu Aren Udayana. Semua hak cipta dilindungi.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- 5. STICKY FLOATING WHATSAPP BAR KHUSUS LAYAR HP (MOBILE)              -->
+  <!-- ===================================================================== -->
+  <div
+    id="mobile-sticky-wa-bar"
+    class="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white/95 backdrop-blur-md border-t border-sage-200 shadow-bar px-4 py-3"
+    style="padding-bottom: max(0.75rem, env(safe-area-inset-bottom));"
+  >
+    <div class="max-w-lg mx-auto flex items-center justify-between gap-3">
+      <!-- Ringkasan Kiri (Klik untuk lompat ke keranjang) -->
+      <a href="#keranjang-section" class="min-w-0 flex-1 group">
+        <div class="flex items-center gap-1.5">
+          <span
+            id="mobile-bar-status"
+            class="text-[11px] font-semibold text-sage-600 truncate"
+          >
+            Keranjang kosong
+          </span>
+        </div>
+        <p
+          id="mobile-bar-total"
+          class="font-serif font-bold text-base text-sage-900 leading-tight truncate"
+        >
+          Rp0
+        </p>
+      </a>
+
+      <!-- Tombol Utama Pesan via WhatsApp -->
+      <button
+        type="button"
+        onclick="handleMobileStickyWhatsAppClick()"
+        class="shrink-0 inline-flex items-center justify-center gap-2 bg-wa-600 hover:bg-wa-700 active:scale-[0.98] text-white font-bold text-xs sm:text-sm px-4 py-3 rounded-xl shadow-sm transition-all"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 fill-current shrink-0" viewBox="0 0 24 24">
+          <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.391c1.453.797 3.094 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.438 1.344-2 1.422-.516.078-1.172.109-1.891-.125-.438-.141-1-.328-1.719-.641-3.031-1.313-5-4.375-5.156-4.578-.156-.203-1.234-1.641-1.234-3.125s.781-2.219 1.063-2.516c.281-.297.609-.375.813-.375h.578c.188 0 .438-.078.688.516.25.609.859 2.094.938 2.25.078.156.125.344.031.547-.094.203-.156.328-.313.5-.156.172-.328.391-.469.516-.156.156-.313.328-.141.641.188.313.813 1.344 1.75 2.172 1.203 1.078 2.219 1.406 2.531 1.563.313.156.5.125.688-.078.188-.203.781-.906.984-1.219.203-.313.422-.266.703-.156.281.109 1.797.844 2.109 1 .313.156.516.234.594.359.078.125.078.734-.172 1.438z"/>
+        </svg>
+        <span>Pesan via WhatsApp</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 6. MODAL KUSTOMISASI MENU                                             -->
+  <!-- ===================================================================== -->
+  <div
+    id="product-modal"
+    class="fixed inset-0 z-50 hidden items-end sm:items-center justify-center p-0 sm:p-4 bg-sage-950/60 backdrop-blur-xs"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-product-title"
+  >
+    <div
+      id="modal-card"
+      class="bg-white w-full sm:max-w-lg rounded-t-3xl sm:rounded-3xl shadow-2xl border border-sage-200 overflow-hidden max-h-[90vh] flex flex-col"
+    >
+      <!-- Header Modal dengan Thumbnail Produk Rasio 1:1 -->
+      <div class="relative p-5 bg-sage-50 border-b border-sage-200 shrink-0 flex items-center gap-4">
+        <div class="w-24 sm:w-28 shrink-0">
+          <div class="aspect-square w-full overflow-hidden rounded-2xl bg-sage-100 border border-sage-200 shadow-sm">
+            <img
+              id="modal-product-image"
+              src=""
+              alt=""
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+        </div>
+
+        <div class="min-w-0 pr-8">
+          <span id="modal-product-category" class="inline-block text-[10px] font-bold uppercase tracking-wider bg-sage-600 text-white px-2.5 py-0.5 rounded-full mb-1.5">
+            Minuman
+          </span>
+          <h3 id="modal-product-title" class="font-serif text-lg sm:text-xl font-bold text-sage-900 leading-snug"></h3>
+          <p id="modal-product-price" class="text-sm font-bold text-sage-700 mt-1"></p>
+        </div>
+
+        <button
+          type="button"
+          onclick="closeProductModal()"
+          aria-label="Tutup modal"
+          class="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-white hover:bg-sage-100 text-sage-900 border border-sage-200 flex items-center justify-center shadow-sm transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Isi Opsi Kustomisasi (Scrollable) -->
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-5 flex-1">
+        <p id="modal-product-desc" class="text-xs sm:text-sm text-sage-700 leading-relaxed"></p>
+
+        <!-- OPSI KHUSUS MINUMAN -->
+        <div id="drink-options-section" class="space-y-4">
+          <!-- Suhu: Hot / Ice -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-sage-800 mb-2">
+              Pilih Suhu
+            </label>
+            <div class="grid grid-cols-2 gap-2.5" id="temp-options">
+              <button
+                type="button"
+                data-temp="Ice"
+                onclick="selectTemp('Ice')"
+                class="temp-btn py-2.5 px-4 rounded-xl border text-sm font-semibold transition-all"
+              >
+                Ice (Dingin)
+              </button>
+              <button
+                type="button"
+                data-temp="Hot"
+                onclick="selectTemp('Hot')"
+                class="temp-btn py-2.5 px-4 rounded-xl border text-sm font-semibold transition-all"
+              >
+                Hot (Panas)
+              </button>
+            </div>
+          </div>
+
+          <!-- Level Gula: Without / Slight / Less / Normal -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-sage-800 mb-2">
+              Level Gula
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="sugar-options">
+              <button type="button" data-sugar="Without" onclick="selectSugar('Without')" class="sugar-btn py-2.5 px-3 rounded-xl border text-xs sm:text-sm font-semibold transition-all">Without</button>
+              <button type="button" data-sugar="Slight" onclick="selectSugar('Slight')" class="sugar-btn py-2.5 px-3 rounded-xl border text-xs sm:text-sm font-semibold transition-all">Slight</button>
+              <button type="button" data-sugar="Less" onclick="selectSugar('Less')" class="sugar-btn py-2.5 px-3 rounded-xl border text-xs sm:text-sm font-semibold transition-all">Less</button>
+              <button type="button" data-sugar="Normal" onclick="selectSugar('Normal')" class="sugar-btn py-2.5 px-3 rounded-xl border text-xs sm:text-sm font-semibold transition-all">Normal</button>
+            </div>
+          </div>
+
+          <!-- Level Es (Hanya muncul jika pilih Ice) -->
+          <div id="ice-level-wrapper">
+            <label class="block text-xs font-bold uppercase tracking-wider text-sage-800 mb-2">
+              Level Es
+            </label>
+            <div class="grid grid-cols-3 gap-2" id="ice-options">
+              <button type="button" data-ice="Tanpa Es" onclick="selectIce('Tanpa Es')" class="ice-btn py-2.5 px-2.5 rounded-xl border text-xs sm:text-sm font-semibold transition-all">Tanpa Es</button>
+              <button type="button" data-ice="Less Ice" onclick="selectIce('Less Ice')" class="ice-btn py-2.5 px-2.5 rounded-xl border text-xs sm:text-sm font-semibold transition-all">Less Ice</button>
+              <button type="button" data-ice="Normal Ice" onclick="selectIce('Normal Ice')" class="ice-btn py-2.5 px-2.5 rounded-xl border text-xs sm:text-sm font-semibold transition-all">Normal Ice</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- OPSI KHUSUS PASTRY -->
+        <div id="pastry-options-section" class="hidden">
+          <label for="pastry-note" class="block text-xs font-bold uppercase tracking-wider text-sage-800 mb-2">
+            Catatan Opsional
+          </label>
+          <input
+            type="text"
+            id="pastry-note"
+            placeholder="Misal: Tolong dipanaskan, potong jadi dua..."
+            class="w-full px-4 py-3 rounded-xl bg-sage-50 border border-sage-200 text-sm text-sage-900 placeholder:text-sage-500/70 focus:outline-none focus:ring-2 focus:ring-sage-500"
+          />
+        </div>
+
+        <!-- Pengatur Jumlah (Quantity) -->
+        <div class="flex items-center justify-between bg-sage-50 border border-sage-200 rounded-2xl p-3.5">
+          <span class="text-sm font-bold text-sage-900">Jumlah Pesanan</span>
+          <div class="flex items-center gap-3">
+            <button
+              type="button"
+              onclick="updateModalQty(-1)"
+              class="w-9 h-9 rounded-xl bg-white border border-sage-300 hover:bg-sage-100 text-sage-900 font-bold text-lg flex items-center justify-center transition-colors"
+              aria-label="Kurangi jumlah"
+            >
+              &minus;
+            </button>
+            <span id="modal-qty" class="w-8 text-center font-bold text-base text-sage-900">1</span>
+            <button
+              type="button"
+              onclick="updateModalQty(1)"
+              class="w-9 h-9 rounded-xl bg-sage-600 hover:bg-sage-700 text-white font-bold text-lg flex items-center justify-center transition-colors"
+              aria-label="Tambah jumlah"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Modal: Tombol Tambah ke Keranjang -->
+      <div class="p-4 sm:p-5 bg-sage-50 border-t border-sage-200 shrink-0">
+        <button
+          type="button"
+          onclick="addToCartFromModal()"
+          class="w-full bg-sage-600 hover:bg-sage-700 text-white font-bold py-3.5 px-5 rounded-xl shadow-soft flex items-center justify-between transition-all"
+        >
+          <span>Tambah ke Keranjang</span>
+          <span id="modal-subtotal-btn" class="bg-white/20 px-3 py-1 rounded-lg text-sm">Rp0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 7. TOAST NOTIFIKASI RINGAN (TANPA ALERT BROWSER)                      -->
+  <!-- ===================================================================== -->
+  <div
+    id="toast-notification"
+    class="fixed top-28 right-4 z-50 bg-sage-900 text-white text-xs sm:text-sm font-medium px-4 py-3 rounded-xl shadow-xl border border-sage-700 flex items-center gap-2.5 transition-all duration-300 translate-x-full opacity-0 pointer-events-none max-w-[90vw]"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-wa-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+    <span id="toast-message">Menu ditambahkan ke keranjang!</span>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT UTAMA (VANILLA JS)                                         -->
+  <!-- ===================================================================== -->
+  <script>
+    // =========================================================================
+    // KONFIGURASI BISNIS & DATA MENU
+    // =========================================================================
+    const BUSINESS_CONFIG = {
+      brandName: 'Kopi Susu Aren Udayana',
+      whatsappNumber: '6281337359955',
+      promoThreshold: 50000,
+      discountRate: 0.10,
+      serviceFee: 1000,
+    };
+
+    const MENU_ITEMS = [
+      {
+        id: 'kopi-susu-aren',
+        name: 'Kopi Susu Aren Signature',
+        category: 'minuman',
+        price: 20000,
+        badge: 'Best Seller',
+        description:
+          'Espresso house blend, susu segar creamy, dan gula aren organik khas Udayana.',
+        image: 'kopi-gula-aren.png',
+      },
+      {
+        id: 'matcha-latte',
+        name: 'Matcha Latte Creamy',
+        category: 'minuman',
+        price: 24000,
+        badge: 'Favorit',
+        description:
+          'Ceremonial matcha Jepang berpadu susu segar yang lembut dan earthy.',
+        image: 'matcha.png',
+      },
+      {
+        id: 'americano-arabica',
+        name: 'Americano Arabica',
+        category: 'minuman',
+        price: 18000,
+        badge: '100% Arabica',
+        description:
+          'Double shot Arabica pilihan dengan karakter bersih, segar, dan aromatic.',
+        image: 'americano.png',
+      },
+      {
+        id: 'croissant-butter',
+        name: 'Croissant Butter',
+        category: 'pastry',
+        price: 22000,
+        badge: 'Fresh Baked',
+        description:
+          'Pastry berlapis renyah dengan aroma French butter panggang hangat.',
+        image: 'croissant.png',
+      },
+    ];
+
+    // =========================================================================
+    // FALLBACK SVG LOKAL BERTEMA HIJAU SAGE & PUTIH
+    // =========================================================================
+    function getLocalSvgFallback(fileName) {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#EDF3ED"/><rect x="24" y="24" width="352" height="352" rx="28" fill="#FFFFFF" stroke="#D6E3D7" stroke-width="2"/><circle cx="200" cy="155" r="36" fill="#EDF3ED"/><path d="M188 155h24m-12-12v24" stroke="#5F7D63" stroke-width="3" stroke-linecap="round"/><text x="200" y="228" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#273B2B">${fileName}</text><text x="200" y="254" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#5F7D63">Gambar lokal siap dimuat</text></svg>`;
+      return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+    }
+
+    function handleImageError(imgEl, fileName) {
+      imgEl.onerror = null;
+      imgEl.src = getLocalSvgFallback(fileName);
+    }
+
+    // =========================================================================
+    // STATE APLIKASI
+    // =========================================================================
+    let activeFilter = 'semua';
+    let cart = [];
+    let currentModalProduct = null;
+    let modalState = {
+      qty: 1,
+      temp: 'Ice',
+      sugar: 'Normal',
+      ice: 'Normal Ice',
+      note: '',
+    };
+    let toastTimeout = null;
+
+    // =========================================================================
+    // HELPER FORMAT RUPIAH
+    // =========================================================================
+    function formatRupiah(amount) {
+      return 'Rp' + Number(amount || 0).toLocaleString('id-ID');
+    }
+
+    // =========================================================================
+    // RENDER KATALOG MENU
+    // =========================================================================
+    function renderMenu() {
+      const grid = document.getElementById('menu-grid');
+      const filteredItems =
+        activeFilter === 'semua'
+          ? MENU_ITEMS
+          : MENU_ITEMS.filter((item) => item.category === activeFilter);
+
+      grid.innerHTML = filteredItems
+        .map(
+          (item) => `
+          <article class="bg-white rounded-3xl border border-sage-200 shadow-card hover:shadow-soft transition-all duration-300 overflow-hidden flex flex-col group">
+            <div class="relative aspect-square w-full bg-sage-100 overflow-hidden">
+              <img
+                src="${item.image}"
+                alt="${item.name}"
+                loading="lazy"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                onerror="handleImageError(this, '${item.image}')"
+              />
+              <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-sage-900 text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm border border-sage-200">
+                ${item.badge}
+              </span>
+            </div>
+
+            <div class="p-4 sm:p-5 flex-1 flex flex-col">
+              <div class="flex items-start justify-between gap-2 mb-1.5">
+                <h3 class="font-serif font-bold text-lg text-sage-900 leading-snug">
+                  ${item.name}
+                </h3>
+              </div>
+
+              <p class="text-xs sm:text-sm text-sage-700/90 leading-relaxed mb-4 flex-1">
+                ${item.description}
+              </p>
+
+              <div class="pt-3 border-t border-sage-100 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[10px] uppercase tracking-wider text-sage-600 font-semibold block">Harga</span>
+                  <span class="font-bold text-base sm:text-lg text-sage-900">${formatRupiah(item.price)}</span>
+                </div>
+                <button
+                  type="button"
+                  onclick="openProductModal('${item.id}')"
+                  class="inline-flex items-center justify-center gap-1.5 bg-sage-600 hover:bg-sage-700 active:scale-[0.98] text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-all"
+                >
+                  <span>Pilih Menu</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        `
+        )
+        .join('');
+    }
+
+    function setCategoryFilter(category) {
+      activeFilter = category;
+      document.querySelectorAll('.filter-btn').forEach((btn) => {
+        const isActive = btn.dataset.filter === category;
+        btn.className = isActive
+          ? 'filter-btn px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-lg bg-sage-600 text-white transition-all'
+          : 'filter-btn px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-lg text-sage-700 hover:text-sage-900 transition-all';
+      });
+      renderMenu();
+    }
+
+    // =========================================================================
+    // LOGIKA MODAL KUSTOMISASI MENU
+    // =========================================================================
+    function openProductModal(productId) {
+      const product = MENU_ITEMS.find((p) => p.id === productId);
+      if (!product) return;
+
+      currentModalProduct = product;
+      modalState = {
+        qty: 1,
+        temp: 'Ice',
+        sugar: 'Normal',
+        ice: 'Normal Ice',
+        note: '',
+      };
+
+      const imgEl = document.getElementById('modal-product-image');
+      imgEl.onerror = function () {
+        handleImageError(this, product.image);
+      };
+      imgEl.src = product.image;
+      imgEl.alt = product.name;
+
+      document.getElementById('modal-product-category').textContent =
+        product.category === 'minuman' ? 'Minuman' : 'Pastry';
+      document.getElementById('modal-product-title').textContent = product.name;
+      document.getElementById('modal-product-price').textContent = formatRupiah(product.price);
+      document.getElementById('modal-product-desc').textContent = product.description;
+      document.getElementById('pastry-note').value = '';
+
+      const drinkSection = document.getElementById('drink-options-section');
+      const pastrySection = document.getElementById('pastry-options-section');
+
+      if (product.category === 'minuman') {
+        drinkSection.classList.remove('hidden');
+        pastrySection.classList.add('hidden');
+        syncModalOptionButtons();
+      } else {
+        drinkSection.classList.add('hidden');
+        pastrySection.classList.remove('hidden');
+      }
+
+      updateModalPriceDisplay();
+
+      const modal = document.getElementById('product-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById('product-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+      currentModalProduct = null;
+    }
+
+    function selectTemp(temp) {
+      modalState.temp = temp;
+      syncModalOptionButtons();
+    }
+
+    function selectSugar(sugar) {
+      modalState.sugar = sugar;
+      syncModalOptionButtons();
+    }
+
+    function selectIce(ice) {
+      modalState.ice = ice;
+      syncModalOptionButtons();
+    }
+
+    function syncModalOptionButtons() {
+      document.querySelectorAll('.temp-btn').forEach((btn) => {
+        const active = btn.dataset.temp === modalState.temp;
+        btn.className = active
+          ? 'temp-btn py-2.5 px-4 rounded-xl border border-sage-600 bg-sage-600 text-white text-sm font-semibold transition-all shadow-sm'
+          : 'temp-btn py-2.5 px-4 rounded-xl border border-sage-200 bg-sage-50 text-sage-800 hover:bg-sage-100 text-sm font-semibold transition-all';
+      });
+
+      document.querySelectorAll('.sugar-btn').forEach((btn) => {
+        const active = btn.dataset.sugar === modalState.sugar;
+        btn.className = active
+          ? 'sugar-btn py-2.5 px-3 rounded-xl border border-sage-600 bg-sage-600 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm'
+          : 'sugar-btn py-2.5 px-3 rounded-xl border border-sage-200 bg-sage-50 text-sage-800 hover:bg-sage-100 text-xs sm:text-sm font-semibold transition-all';
+      });
+
+      const iceWrapper = document.getElementById('ice-level-wrapper');
+      if (modalState.temp === 'Ice') {
+        iceWrapper.classList.remove('hidden');
+      } else {
+        iceWrapper.classList.add('hidden');
+      }
+
+      document.querySelectorAll('.ice-btn').forEach((btn) => {
+        const active = btn.dataset.ice === modalState.ice;
+        btn.className = active
+          ? 'ice-btn py-2.5 px-2.5 rounded-xl border border-sage-600 bg-sage-600 text-white text-xs sm:text-sm font-semibold transition-all shadow-sm'
+          : 'ice-btn py-2.5 px-2.5 rounded-xl border border-sage-200 bg-sage-50 text-sage-800 hover:bg-sage-100 text-xs sm:text-sm font-semibold transition-all';
+      });
+    }
+
+    function updateModalQty(delta) {
+      modalState.qty = Math.max(1, modalState.qty + delta);
+      updateModalPriceDisplay();
+    }
+
+    function updateModalPriceDisplay() {
+      if (!currentModalProduct) return;
+      document.getElementById('modal-qty').textContent = modalState.qty;
+      document.getElementById('modal-subtotal-btn').textContent = formatRupiah(
+        currentModalProduct.price * modalState.qty
+      );
+    }
+
+    // =========================================================================
+    // MANAJEMEN KERANJANG BELANJA
+    // =========================================================================
+    function addToCartFromModal() {
+      if (!currentModalProduct) return;
+
+      const isDrink = currentModalProduct.category === 'minuman';
+      const noteValue = isDrink
+        ? ''
+        : document.getElementById('pastry-note').value.trim();
+
+      const variantKey = isDrink
+        ? `${currentModalProduct.id}|${modalState.temp}|${modalState.sugar}|${
+            modalState.temp === 'Ice' ? modalState.ice : 'no-ice'
+          }`
+        : `${currentModalProduct.id}|note:${noteValue.toLowerCase()}`;
+
+      const existingItem = cart.find((item) => item.key === variantKey);
+
+      if (existingItem) {
+        existingItem.qty += modalState.qty;
+      } else {
+        cart.push({
+          key: variantKey,
+          productId: currentModalProduct.id,
+          name: currentModalProduct.name,
+          image: currentModalProduct.image,
+          category: currentModalProduct.category,
+          price: currentModalProduct.price,
+          qty: modalState.qty,
+          temp: isDrink ? modalState.temp : null,
+          sugar: isDrink ? modalState.sugar : null,
+          ice: isDrink && modalState.temp === 'Ice' ? modalState.ice : null,
+          note: noteValue,
+        });
+      }
+
+      const addedName = currentModalProduct.name;
+      closeProductModal();
+      renderCart();
+      hideCheckoutError();
+      showToast(`${addedName} ditambahkan ke keranjang`);
+    }
+
+    function updateCartItemQty(index, delta) {
+      if (!cart[index]) return;
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      renderCart();
+    }
+
+    function removeCartItem(index) {
+      if (!cart[index]) return;
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function formatItemVariantSummary(item) {
+      if (item.category === 'minuman') {
+        const parts = [`Suhu: ${item.temp}`, `Gula: ${item.sugar}`];
+        if (item.temp === 'Ice' && item.ice) {
+          parts.push(`Es: ${item.ice}`);
+        }
+        return parts.join(' • ');
+      }
+      return item.note ? `Catatan: ${item.note}` : 'Tanpa catatan khusus';
+    }
+
+    function calculateTotals() {
+      const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      const hasDiscount = subtotal >= BUSINESS_CONFIG.promoThreshold;
+      const discount = hasDiscount
+        ? Math.round(subtotal * BUSINESS_CONFIG.discountRate)
+        : 0;
+      const serviceFee = cart.length > 0 ? BUSINESS_CONFIG.serviceFee : 0;
+      const total = subtotal - discount + serviceFee;
+
+      return { subtotal, totalQty, hasDiscount, discount, serviceFee, total };
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items-container');
+      const { subtotal, totalQty, hasDiscount, discount, serviceFee, total } =
+        calculateTotals();
+
+      // Update badge & label jumlah item
+      document.getElementById('nav-cart-badge').textContent = totalQty;
+      document.getElementById('cart-item-count-label').textContent = `${totalQty} item`;
+
+      // Update daftar item keranjang
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-8 px-4 bg-sage-50 rounded-2xl border border-dashed border-sage-300">
+            <div class="w-12 h-12 mx-auto rounded-full bg-sage-100 text-sage-600 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+              </svg>
+            </div>
+            <p class="text-sm font-semibold text-sage-900">Keranjang masih kosong</p>
+            <p class="text-xs text-sage-600 mt-1">Pilih menu kopi atau pastry favorit Anda terlebih dahulu.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = cart
+          .map(
+            (item, idx) => `
+            <div class="bg-sage-50 rounded-2xl p-3.5 border border-sage-200 flex flex-col gap-2.5">
+              <div class="flex items-start justify-between gap-2.5">
+                <div class="flex items-start gap-3 min-w-0">
+                  <div class="w-14 shrink-0">
+                    <div class="aspect-square w-full overflow-hidden rounded-xl bg-sage-100 border border-sage-200">
+                      <img
+                        src="${item.image}"
+                        alt="${item.name}"
+                        class="w-full h-full object-cover object-center"
+                        onerror="handleImageError(this, '${item.image}')"
+                      />
+                    </div>
+                  </div>
+                  <div class="min-w-0">
+                    <h4 class="font-bold text-sm text-sage-900 leading-snug">${item.name}</h4>
+                    <p class="text-[11px] text-sage-700 mt-0.5 leading-relaxed">
+                      ${formatItemVariantSummary(item)}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onclick="removeCartItem(${idx})"
+                  title="Hapus item"
+                  aria-label="Hapus ${item.name}"
+                  class="text-sage-500 hover:text-red-600 p-1 rounded-lg hover:bg-red-50 transition-colors shrink-0"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 6h18" />
+                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="flex items-center justify-between pt-1">
+                <span class="font-bold text-sm text-sage-900">
+                  ${formatRupiah(item.price * item.qty)}
+                </span>
+
+                <div class="inline-flex items-center gap-2 bg-white rounded-xl border border-sage-200 p-1">
+                  <button
+                    type="button"
+                    onclick="updateCartItemQty(${idx}, -1)"
+                    class="w-7 h-7 rounded-lg hover:bg-sage-100 text-sage-900 font-bold text-sm flex items-center justify-center transition-colors"
+                    aria-label="Kurangi jumlah"
+                  >
+                    &minus;
+                  </button>
+                  <span class="w-6 text-center text-xs font-bold text-sage-900">${item.qty}</span>
+                  <button
+                    type="button"
+                    onclick="updateCartItemQty(${idx}, 1)"
+                    class="w-7 h-7 rounded-lg bg-sage-600 hover:bg-sage-700 text-white font-bold text-sm flex items-center justify-center transition-colors"
+                    aria-label="Tambah jumlah"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          `
+          )
+          .join('');
+      }
+
+      // Update indikator promo 10%
+      const promoBox = document.getElementById('promo-status-box');
+      const promoText = document.getElementById('promo-status-text');
+      const promoBadge = document.getElementById('promo-active-badge');
+      const promoBar = document.getElementById('promo-progress-bar');
+      const promoIcon = document.getElementById('promo-icon');
+
+      const progressPct = Math.min(
+        100,
+        Math.round((subtotal / BUSINESS_CONFIG.promoThreshold) * 100)
+      );
+      promoBar.style.width = `${progressPct}%`;
+
+      if (hasDiscount) {
+        promoBox.className =
+          'rounded-2xl p-3.5 bg-sage-100 border border-sage-400 transition-all';
+        promoText.innerHTML = `Selamat! <strong>Diskon 10%</strong> otomatis aktif (hemat <strong class="text-sage-700">${formatRupiah(discount)}</strong>).`;
+        promoBadge.classList.remove('hidden');
+        promoBar.className =
+          'h-full bg-sage-600 rounded-full transition-all duration-300';
+        promoIcon.className = 'mt-0.5 text-sage-700 shrink-0';
+      } else {
+        const remaining = BUSINESS_CONFIG.promoThreshold - subtotal;
+        promoBox.className =
+          'rounded-2xl p-3.5 bg-sage-50 border border-sage-200 transition-all';
+        promoText.innerHTML = `Tambah <strong class="text-sage-700">${formatRupiah(remaining)}</strong> lagi untuk otomatis dapat <strong>Diskon 10%</strong>!`;
+        promoBadge.classList.add('hidden');
+        promoBar.className =
+          'h-full bg-sage-500 rounded-full transition-all duration-300';
+        promoIcon.className = 'mt-0.5 text-sage-600 shrink-0';
+      }
+
+      // Update ringkasan harga
+      document.getElementById('summary-subtotal').textContent = formatRupiah(subtotal);
+
+      const discountRow = document.getElementById('summary-discount-row');
+      if (hasDiscount) {
+        discountRow.classList.remove('hidden');
+        discountRow.classList.add('flex');
+        document.getElementById('summary-discount').textContent = `-${formatRupiah(discount)}`;
+      } else {
+        discountRow.classList.add('hidden');
+        discountRow.classList.remove('flex');
+      }
+
+      document.getElementById('summary-service-fee').textContent = formatRupiah(serviceFee);
+      document.getElementById('summary-total').textContent = formatRupiah(total);
+
+      // Update Sticky Floating Mobile WhatsApp Bar
+      const mobileStatus = document.getElementById('mobile-bar-status');
+      const mobileTotal = document.getElementById('mobile-bar-total');
+      if (totalQty > 0) {
+        mobileStatus.textContent = `${totalQty} item • Total Estimasi`;
+        mobileTotal.textContent = formatRupiah(total);
+      } else {
+        mobileStatus.textContent = 'Keranjang kosong';
+        mobileTotal.textContent = 'Pilih menu dulu';
+      }
+    }
+
+    // =========================================================================
+    // LOGIKA FORM DATA PEMESAN & CHECKOUT WHATSAPP
+    // =========================================================================
+    function getSelectedDeliveryMethod() {
+      const checked = document.querySelector('input[name="deliveryMethod"]:checked');
+      return checked ? checked.value : 'Pickup di Toko';
+    }
+
+    function toggleDeliveryAddress() {
+      const method = getSelectedDeliveryMethod();
+      const addressWrapper = document.getElementById('address-wrapper');
+      const errorAddress = document.getElementById('error-address');
+
+      if (method.startsWith('Antar ke Rumah')) {
+        addressWrapper.classList.remove('hidden');
+      } else {
+        addressWrapper.classList.add('hidden');
+        errorAddress.classList.add('hidden');
+      }
+    }
+
+    function showCheckoutError(message) {
+      const banner = document.getElementById('checkout-error-banner');
+      document.getElementById('checkout-error-text').textContent = message;
+      banner.classList.remove('hidden');
+    }
+
+    function hideCheckoutError() {
+      document.getElementById('checkout-error-banner').classList.add('hidden');
+      document.getElementById('error-name').classList.add('hidden');
+      document.getElementById('error-address').classList.add('hidden');
+      document.getElementById('customer-name').classList.remove('ring-2', 'ring-red-400', 'border-red-400');
+      document.getElementById('customer-address').classList.remove('ring-2', 'ring-red-400', 'border-red-400');
+    }
+
+    // Alur Checkout Terpusat (Dipakai oleh Form & Sticky Mobile WhatsApp Bar)
+    function processWhatsAppCheckout(isFromMobileBar = false) {
+      hideCheckoutError();
+
+      const nameInput = document.getElementById('customer-name');
+      const addressInput = document.getElementById('customer-address');
+      const errorName = document.getElementById('error-name');
+      const errorAddress = document.getElementById('error-address');
+
+      const customerName = nameInput.value.trim();
+      const deliveryMethod = getSelectedDeliveryMethod();
+      const isDelivery = deliveryMethod.startsWith('Antar ke Rumah');
+      const customerAddress = addressInput.value.trim();
+
+      // Validasi 1: Keranjang kosong
+      if (cart.length === 0) {
+        if (isFromMobileBar) {
+          showToast('Keranjang masih kosong, yuk pilih menu dulu!');
+          document.getElementById('katalog-menu').scrollIntoView({ behavior: 'smooth' });
+        } else {
+          showCheckoutError('Keranjang pesanan masih kosong. Silakan pilih menu terlebih dahulu.');
+        }
+        return;
+      }
+
+      // Validasi 2: Nama Pemesan wajib diisi
+      if (!customerName) {
+        errorName.textContent = 'Nama pemesan wajib diisi.';
+        errorName.classList.remove('hidden');
+        nameInput.classList.add('ring-2', 'ring-red-400', 'border-red-400');
+        showCheckoutError('Lengkapi nama pemesan dulu sebelum kirim ke WhatsApp.');
+
+        if (isFromMobileBar) {
+          document.getElementById('checkout-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(() => nameInput.focus(), 450);
+        } else {
+          nameInput.focus();
+        }
+        return;
+      }
+
+      // Validasi 3: Alamat Lengkap & Patokan wajib jika Antar ke Rumah
+      if (isDelivery && !customerAddress) {
+        errorAddress.textContent = 'Alamat lengkap & patokan wajib diisi untuk pengantaran.';
+        errorAddress.classList.remove('hidden');
+        addressInput.classList.add('ring-2', 'ring-red-400', 'border-red-400');
+        showCheckoutError('Lengkapi alamat pengantaran dulu sebelum kirim ke WhatsApp.');
+
+        if (isFromMobileBar) {
+          document.getElementById('checkout-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(() => addressInput.focus(), 450);
+        } else {
+          addressInput.focus();
+        }
+        return;
+      }
+
+      // Susun pesan WhatsApp terformat rapi
+      const { subtotal, hasDiscount, discount, serviceFee, total } = calculateTotals();
+
+      const orderLines = cart.map((item, index) => {
+        const itemSubtotal = formatRupiah(item.price * item.qty);
+        let variantDetail = '';
+        if (item.category === 'minuman') {
+          const specs = [`Suhu: ${item.temp}`, `Gula: ${item.sugar}`];
+          if (item.temp === 'Ice' && item.ice) {
+            specs.push(`Es: ${item.ice}`);
+          }
+          variantDetail = `\n   _${specs.join(' | ')}_`;
+        } else if (item.note) {
+          variantDetail = `\n   _Catatan: ${item.note}_`;
+        }
+        return `${index + 1}. *${item.name}* (${item.qty}x) — ${itemSubtotal}${variantDetail}`;
+      });
+
+      const messageParts = [
+        `Halo *${BUSINESS_CONFIG.brandName}*! Saya ingin memesan:`,
+        '',
+        `*Nama Pemesan:* ${customerName}`,
+        `*Metode Pengambilan:* ${deliveryMethod}`,
+      ];
+
+      if (isDelivery) {
+        messageParts.push(`*Alamat Lengkap & Patokan:* ${customerAddress}`);
+      }
+
+      messageParts.push(
+        '',
+        '*Daftar Pesanan:*',
+        ...orderLines,
+        '',
+        '*Ringkasan Pembayaran:*',
+        `• Subtotal: ${formatRupiah(subtotal)}`
+      );
+
+      if (hasDiscount) {
+        messageParts.push(`• Diskon Promo (10%): -${formatRupiah(discount)}`);
+      }
+
+      messageParts.push(
+        `• Biaya Layanan: ${formatRupiah(serviceFee)}`,
+        `• *Total Estimasi:* *${formatRupiah(total)}* _(belum termasuk ongkir)_`,
+        '',
+        'Mohon konfirmasi pesanannya ya. Terima kasih!'
+      );
+
+      const finalMessage = messageParts.join('\n');
+      const waUrl = `https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+        finalMessage
+      )}`;
+
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    function handleCheckoutSubmit(event) {
+      event.preventDefault();
+      processWhatsAppCheckout(false);
+    }
+
+    function handleMobileStickyWhatsAppClick() {
+      processWhatsAppCheckout(true);
+    }
+
+    // =========================================================================
+    // TOAST NOTIFIKASI
+    // =========================================================================
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      document.getElementById('toast-message').textContent = message;
+
+      toast.classList.remove('translate-x-full', 'opacity-0');
+      toast.classList.add('translate-x-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-x-full', 'opacity-0');
+        toast.classList.remove('translate-x-0', 'opacity-100');
+      }, 2600);
+    }
+
+    // =========================================================================
+    // INISIALISASI HALAMAN & EVENT LISTENER
+    // =========================================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+      renderMenu();
+      renderCart();
+
+      document
+        .getElementById('checkout-form')
+        .addEventListener('submit', handleCheckoutSubmit);
+
+      // Hilangkan highlight error saat pengguna mulai mengetik
+      document.getElementById('customer-name').addEventListener('input', hideCheckoutError);
+      document.getElementById('customer-address').addEventListener('input', hideCheckoutError);
+
+      document.getElementById('product-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'product-modal') {
+          closeProductModal();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && currentModalProduct) {
+          closeProductModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
