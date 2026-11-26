@@ -122,188 +122,188 @@
 <body class="bg-sage-50 text-sage-900 font-sans antialiased selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
 
   <!-- ===================================================================== -->
-  <!-- 1. BANNER PROMO STICKY & HEADER NAVIGASI                              -->
+  <!-- 2. HERO BANNER FOTOGRAFI + STRIP KEUNGGULAN                           -->
   <!-- ===================================================================== -->
-  <div class="sticky top-0 z-40 shadow-sm">
-    <!-- Banner Promo Hijau Sage Gelap -->
-    <div class="bg-gradient-to-r from-sage-900 via-sage-800 to-sage-900 text-white px-4 py-2.5 text-center border-b border-sage-700/60">
-      <p class="text-xs sm:text-sm font-semibold tracking-wide flex items-center justify-center gap-2 flex-wrap">
-        <span class="inline-flex items-center gap-1 bg-white text-sage-900 text-[10px] sm:text-xs font-bold uppercase px-2.5 py-0.5 rounded-full shadow-xs">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-sage-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
-          </svg>
-          <span>Diskon 5%</span>
-        </span>
-        <span>PROMO HARI INI! Belanja minimal Rp30.000 otomatis dapat diskon 5%</span>
-      </p>
-    </div>
+  <section class="bg-sage-50 border-b border-sage-200/80 pt-5 sm:pt-7 pb-9 sm:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Navbar Putih Bersih -->
-    <header class="bg-white/95 backdrop-blur-md border-b border-sage-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
-        <!-- Logo & Nama Brand -->
-        <a href="#" class="flex items-center gap-3 group min-w-0">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sage-600 to-sage-800 text-white flex items-center justify-center shadow-sm group-hover:from-sage-700 group-hover:to-sage-900 transition-all shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
-              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
-              <line x1="6" x2="6" y1="2" y2="4" />
-              <line x1="10" x2="10" y1="2" y2="4" />
-              <line x1="14" x2="14" y1="2" y2="4" />
-            </svg>
+      <!-- Banner Utama Berbasis Foto (Full Visual Editorial Card) -->
+      <div class="relative rounded-3xl overflow-hidden bg-sage-900 shadow-soft border border-sage-200/70">
+        <!-- Latar Belakang Foto Suasana Kedai Kopi + Overlay Hijau Sage Gelap -->
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80"
+          alt="Suasana Kedai Kopi Susu Aren Udayana"
+          class="absolute inset-0 w-full h-full object-cover object-center scale-105 opacity-45"
+          onerror="this.style.display='none'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-sage-950/92 via-sage-900/80 to-sage-900/55"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-sage-950/75 via-transparent to-sage-950/20"></div>
+
+        <!-- Konten Banner -->
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center p-6 sm:p-10 lg:p-12">
+
+          <!-- Kolom Kiri: Teks Promo, Headline & CTA (Tanpa Rating Konsumen) -->
+          <div class="lg:col-span-6 text-center lg:text-left space-y-5">
+            <!-- Badge Jam Buka & Info Promo -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-wa-500 animate-pulse"></span>
+                <span>Buka Setiap Hari &bull; 08.00&ndash;22.00 WITA</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 bg-sage-200 text-sage-950 text-xs font-bold px-3 py-1.5 rounded-full">
+                <span>Diskon 5% Min. Rp30.000</span>
+              </span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-serif text-3xl sm:text-4xl lg:text-[3.1rem] font-bold text-white leading-[1.15] tracking-tight">
+              Nikmati Segarnya
+              <span class="text-sage-200 italic">Kopi Susu Aren</span>
+              Racikan Barista Udayana
+            </h1>
+
+            <!-- Deskripsi Singkat -->
+            <p class="text-sage-100/90 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Perpaduan espresso Arabica pilihan, karamel gula aren murni, dan susu creamy yang diracik segar saat Anda pesan. Bebas atur suhu, level gula, dan es langsung dari HP.
+            </p>
+
+            <!-- Dual CTA -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-1">
+              <a
+                href="#katalog-menu"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-sage-100 active:scale-[0.99] text-sage-900 font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-lg transition-all"
+              >
+                <span>Pesan Sekarang</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+
+              <button
+                type="button"
+                onclick="claimPromoHighlight()"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/12 hover:bg-white/20 backdrop-blur-md text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-xl border border-white/30 transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-sage-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                  <path d="m15 9-6 6" />
+                  <path d="M9 9h.01" />
+                  <path d="M15 15h.01" />
+                </svg>
+                <span>Klaim Diskon 5%</span>
+              </button>
+            </div>
           </div>
-          <div class="leading-tight min-w-0">
-            <span class="font-serif font-bold text-base sm:text-lg text-sage-900 block truncate">
-              Kopi Susu Aren Udayana
-            </span>
-            <span class="text-[11px] text-sage-600 hidden sm:block">
-              Kedai Kopi Lokal &bull; Seduhan Segar Setiap Hari
-            </span>
+
+          <!-- Kolom Kanan: Kolase Foto Produk Nyata (Interaktif, Klik untuk Pilih Menu) -->
+          <div class="lg:col-span-6">
+            <div class="grid grid-cols-12 gap-3 sm:gap-3.5 max-w-lg mx-auto lg:ml-auto">
+              <!-- Foto Utama Besar: Kopi Susu Aren Signature -->
+              <button
+                type="button"
+                onclick="openProductModal('kopi-susu-aren')"
+                class="col-span-7 group relative rounded-2xl overflow-hidden bg-sage-800 border-2 border-white/20 shadow-glass text-left focus:outline-none focus:ring-2 focus:ring-white"
+              >
+                <div class="aspect-square w-full overflow-hidden">
+                  <img
+                    src="kopi-gula-aren.png"
+                    alt="Kopi Susu Aren Signature"
+                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    onerror="handleImageError(this, 'kopi-gula-aren.png')"
+                  />
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-sage-950/85 via-sage-950/15 to-transparent"></div>
+                <span class="absolute top-2.5 left-2.5 bg-white/95 text-sage-900 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-xs">
+                  Signature
+                </span>
+                <div class="absolute inset-x-0 bottom-0 p-3 sm:p-3.5 flex items-end justify-between gap-2">
+                  <div class="min-w-0">
+                    <p class="text-white font-serif font-bold text-sm sm:text-base leading-tight truncate">Kopi Susu Aren</p>
+                    <p class="text-sage-200 text-xs font-semibold mt-0.5">Rp20.000</p>
+                  </div>
+                  <span class="shrink-0 bg-white text-sage-900 group-hover:bg-sage-100 text-[11px] font-bold px-2.5 py-1 rounded-lg transition-colors">
+                    + Pilih
+                  </span>
+                </div>
+              </button>
+
+              <!-- 2 Foto Pendamping di Kanan: Matcha & Croissant -->
+              <div class="col-span-5 grid grid-rows-2 gap-3 sm:gap-3.5">
+                <button
+                  type="button"
+                  onclick="openProductModal('matcha-latte')"
+                  class="group relative rounded-2xl overflow-hidden bg-sage-800 border-2 border-white/20 shadow-glass text-left focus:outline-none focus:ring-2 focus:ring-white"
+                >
+                  <div class="w-full h-full aspect-[4/3] sm:aspect-auto overflow-hidden">
+                    <img
+                      src="matcha.png"
+                      alt="Matcha Latte Creamy"
+                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      onerror="handleImageError(this, 'matcha.png')"
+                    />
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-sage-950/85 via-transparent to-transparent"></div>
+                  <div class="absolute inset-x-0 bottom-0 p-2.5">
+                    <p class="text-white font-bold text-xs leading-tight truncate">Matcha Latte</p>
+                    <p class="text-sage-200 text-[11px] font-semibold">Rp24.000</p>
+                  </div>
+                </button>
+
+                <button
+                  type="button"
+                  onclick="openProductModal('croissant-butter')"
+                  class="group relative rounded-2xl overflow-hidden bg-sage-800 border-2 border-white/20 shadow-glass text-left focus:outline-none focus:ring-2 focus:ring-white"
+                >
+                  <div class="w-full h-full aspect-[4/3] sm:aspect-auto overflow-hidden">
+                    <img
+                      src="croissant.png"
+                      alt="Croissant Butter"
+                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      onerror="handleImageError(this, 'croissant.png')"
+                    />
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-sage-950/85 via-transparent to-transparent"></div>
+                  <div class="absolute inset-x-0 bottom-0 p-2.5">
+                    <p class="text-white font-bold text-xs leading-tight truncate">Croissant Butter</p>
+                    <p class="text-sage-200 text-[11px] font-semibold">Rp22.000</p>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Strip Foto Bawah: Americano Arabica + Info Promo -->
+              <button
+                type="button"
+                onclick="openProductModal('americano-arabica')"
+                class="col-span-12 group bg-white/12 hover:bg-white/18 backdrop-blur-md border border-white/20 rounded-2xl p-2.5 flex items-center justify-between gap-3 text-left transition-all"
+              >
+                <div class="flex items-center gap-3 min-w-0">
+                  <div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-white/25 bg-sage-800">
+                    <img
+                      src="americano.png"
+                      alt="Americano Arabica"
+                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                      onerror="handleImageError(this, 'americano.png')"
+                    />
+                  </div>
+                  <div class="min-w-0">
+                    <p class="text-white font-bold text-xs sm:text-sm truncate">Americano Arabica &bull; Rp18.000</p>
+                    <p class="text-sage-200 text-[11px] truncate">Biji Arabica pilihan, bisa Hot atau Ice sesuai selera</p>
+                  </div>
+                </div>
+                <span class="shrink-0 bg-white/20 group-hover:bg-white text-white group-hover:text-sage-900 text-[11px] font-bold px-3 py-1.5 rounded-lg transition-colors">
+                  Pilih
+                </span>
+              </button>
+            </div>
           </div>
-        </a>
-
-        <!-- Pill Status Live Jam Operasional -->
-        <div class="hidden lg:inline-flex items-center gap-2 bg-sage-50 border border-sage-200 text-sage-800 text-xs font-semibold px-3.5 py-1.5 rounded-full">
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-wa-500 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-wa-500 animate-pulse"></span>
-          </span>
-          <span>Buka &bull; 08.00&ndash;22.00 WITA</span>
-        </div>
-
-        <!-- Navigasi Kanan: Link Menu & Indikator Keranjang -->
-        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-          <a
-            href="#katalog-menu"
-            class="hidden md:inline-block text-sm font-medium text-sage-700 hover:text-sage-900 px-3 py-2 rounded-xl hover:bg-sage-100 transition-colors"
-          >
-            Menu
-          </a>
-          <a
-            href="#keranjang-section"
-            class="relative inline-flex items-center gap-2 bg-sage-100 hover:bg-sage-200/70 text-sage-900 font-semibold text-sm px-3.5 py-2.5 rounded-xl border border-sage-200 transition-all"
-            aria-label="Lihat keranjang belanja"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sage-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="8" cy="21" r="1" />
-              <circle cx="19" cy="21" r="1" />
-              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-            </svg>
-            <span class="hidden sm:inline">Keranjang</span>
-            <span
-              id="nav-cart-badge"
-              class="inline-flex items-center justify-center min-w-[22px] h-[22px] px-1.5 text-xs font-bold rounded-full bg-sage-600 text-white"
-            >
-              0
-            </span>
-          </a>
         </div>
       </div>
-    </header>
-  </div>
 
-  <!-- ===================================================================== -->
-  <!-- 2. HERO SECTION BERLAPIS & KAYA ELEMEN + STRIP KEUNGGULAN             -->
-  <!-- ===================================================================== -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-white via-sage-50 to-sage-100/60 border-b border-sage-200/80">
-    <!-- Lapisan 1: Pola Titik Halus -->
-    <div class="pointer-events-none absolute inset-0 bg-sage-dots opacity-70"></div>
-
-    <!-- Lapisan 2: Dekorasi Blob Gradien Hijau Sage Lembut -->
-    <div class="pointer-events-none absolute -top-28 -right-24 w-96 h-96 rounded-full bg-sage-300/35 blur-3xl"></div>
-    <div class="pointer-events-none absolute top-1/3 -left-28 w-80 h-80 rounded-full bg-sage-200/60 blur-3xl"></div>
-    <div class="pointer-events-none absolute -bottom-24 right-1/3 w-72 h-72 rounded-full bg-white/80 blur-3xl"></div>
-
-    <!-- Lapisan 3: Aksen Daun & Biji Kopi SVG Tipis di Sudut -->
-    <svg
-      class="pointer-events-none absolute top-6 left-4 sm:left-10 w-24 h-24 sm:w-32 sm:h-32 text-sage-400/25"
-      viewBox="0 0 120 120"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path d="M22 96C26 52 54 24 98 20C94 64 66 92 22 96Z" stroke="currentColor" stroke-width="2" />
-      <path d="M22 96L98 20" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
-      <path d="M46 72C42 60 44 48 52 38" stroke="currentColor" stroke-width="1.5" />
-      <path d="M68 50C58 54 46 56 36 52" stroke="currentColor" stroke-width="1.5" />
-    </svg>
-
-    <svg
-      class="pointer-events-none absolute bottom-28 right-4 sm:right-10 w-28 h-28 sm:w-36 sm:h-36 text-sage-500/15"
-      viewBox="0 0 120 120"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <ellipse cx="60" cy="60" rx="34" ry="46" transform="rotate(-24 60 60)" stroke="currentColor" stroke-width="2" />
-      <path d="M42 24C58 46 62 74 78 96" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-      <circle cx="96" cy="28" r="5" fill="currentColor" />
-      <circle cx="20" cy="88" r="3.5" fill="currentColor" />
-    </svg>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-14 pb-10 sm:pb-12 relative">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-
-        <!-- =============================================================== -->
-        <!-- KOLOM KIRI HERO                                                 -->
-        <!-- =============================================================== -->
-        <div class="lg:col-span-6 text-center lg:text-left space-y-5">
-          <!-- Pill Badge & Status Live (Tampil di Mobile) -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
-            <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-sage-200 text-sage-700 text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-xs">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-sage-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-              </svg>
-              <span>Kedai Kopi Lokal &bull; Freshly Brewed Setiap Hari</span>
-            </div>
-
-            <div class="inline-flex lg:hidden items-center gap-1.5 bg-sage-100 border border-sage-200 text-sage-800 text-[11px] font-semibold px-3 py-1.5 rounded-full">
-              <span class="w-2 h-2 rounded-full bg-wa-500 animate-pulse"></span>
-              <span>Buka 08.00&ndash;22.00 WITA</span>
-            </div>
-          </div>
-
-          <!-- Headline Besar dengan Highlight Kata Bergaya Sage -->
-          <h1 class="font-serif text-3xl sm:text-4xl lg:text-[3.25rem] font-bold text-sage-900 leading-[1.15] tracking-tight">
-            Nikmati Segarnya
-            <span class="relative inline-block px-2 py-0.5 mx-0.5 text-sage-700 italic">
-              <span class="relative z-10">Kopi Susu Aren</span>
-              <span class="absolute inset-x-0 bottom-1 h-3 sm:h-3.5 bg-sage-200/85 rounded-lg -z-0"></span>
-            </span>
-            Racikan Barista Udayana
-          </h1>
-
-          <!-- Subheadline Hangat -->
-          <p class="text-sage-700 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Perpaduan espresso Arabica segar, karamel gula aren murni, dan susu creamy yang bikin hari makin bertenaga. Bebas atur suhu, level gula, dan es langsung dari HP Anda.
-          </p>
-
-          <!-- Dual CTA: Utama & Sekunder -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-1">
-            <a
-              href="#katalog-menu"
-              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 active:scale-[0.99] text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-soft transition-all"
-            >
-              <span>Pesan Sekarang</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </a>
-
-            <button
-              type="button"
-              onclick="claimPromoHighlight()"
-              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-sage-100 text-sage-800 font-semibold text-sm sm:text-base px-6 py-3.5 rounded-xl border border-sage-300 shadow-xs transition-all"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-sage-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-                <path d="m15 9-6 6" />
-                <path d="M9 9h.01" />
-                <path d="M15 15h.01" />
-              </svg>
-              <span>Klaim Diskon 5%</span>
+      <!-- ================================================================= -->
+      <!-- STRIP KEUNGGULAN / FEATURE HIGHLIGHTS (4 KARTU RINGKAS)           -->
+      <!-- ================================================================= -->
+      <div class="mt-6 sm:mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             </button>
           </div>
 
@@ -998,7 +998,452 @@
       discountRate: 0.05,
       serviceFee: 1000,
     };
-// ... existing code ... -->
+
+    const MENU_ITEMS = [
+      {
+        id: 'kopi-susu-aren',
+        name: 'Kopi Susu Aren Signature',
+        category: 'minuman',
+        price: 20000,
+        badge: 'Best Seller',
+        description:
+          'Espresso Arabica segar berpadu susu creamy dan karamel gula aren murni khas Udayana.',
+        image: 'kopi-gula-aren.png',
+      },
+      {
+        id: 'matcha-latte',
+        name: 'Matcha Latte Creamy',
+        category: 'minuman',
+        price: 24000,
+        badge: 'Favorit',
+        description:
+          'Bubuk matcha Jepang autentik dengan susu lembut yang manisnya pas dan menenangkan.',
+        image: 'matcha.png',
+      },
+      {
+        id: 'americano-arabica',
+        name: 'Americano Arabica',
+        category: 'minuman',
+        price: 18000,
+        badge: '100% Arabica',
+        description:
+          'Seduhan espresso single-origin Arabica dengan rasa bersih, segar, dan aroma sangrai khas.',
+        image: 'americano.png',
+      },
+      {
+        id: 'croissant-butter',
+        name: 'Croissant Butter',
+        category: 'pastry',
+        price: 22000,
+        badge: 'Fresh Baked',
+        description:
+          'Pastry berlapis renyah keemasan dengan aroma butter hangat, teman sempurna untuk kopi Anda.',
+        image: 'croissant.png',
+      },
+    ];
+
+    // =========================================================================
+    // STATE APLIKASI
+    // =========================================================================
+    let currentCategoryFilter = 'semua';
+    let cart = [];
+    let activeModalProduct = null;
+    let modalState = {
+      qty: 1,
+      temp: 'Ice',
+      sugar: 'Normal',
+      ice: 'Normal Ice',
+      note: '',
+    };
+    let toastTimer = null;
+
+    // =========================================================================
+    // HELPER FORMAT RUPIAH & TOAST
+    // =========================================================================
+    function formatRupiah(amount) {
+      const safeNum = Number(amount) || 0;
+      return 'Rp' + safeNum.toLocaleString('id-ID');
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const msgEl = document.getElementById('toast-message');
+      if (!toast || !msgEl) return;
+
+      msgEl.textContent = message;
+      toast.classList.remove('translate-x-full', 'opacity-0');
+      toast.classList.add('translate-x-0', 'opacity-100');
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('translate-x-0', 'opacity-100');
+        toast.classList.add('translate-x-full', 'opacity-0');
+      }, 2800);
+    }
+
+    // =========================================================================
+    // RENDER KATALOG MENU & FILTER KATEGORI
+    // =========================================================================
+    function setCategoryFilter(category) {
+      currentCategoryFilter = category;
+      document.querySelectorAll('.filter-btn').forEach((btn) => {
+        const isActive = btn.dataset.filter === category;
+        btn.className = isActive
+          ? 'filter-btn px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-lg bg-sage-600 text-white transition-all'
+          : 'filter-btn px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-lg text-sage-700 hover:text-sage-900 transition-all';
+      });
+      renderMenuCatalog();
+    }
+
+    function renderMenuCatalog() {
+      const grid = document.getElementById('menu-grid');
+      if (!grid) return;
+
+      const filtered =
+        currentCategoryFilter === 'semua'
+          ? MENU_ITEMS
+          : MENU_ITEMS.filter((item) => item.category === currentCategoryFilter);
+
+      grid.innerHTML = filtered
+        .map(
+          (item) => `
+          <article class="bg-white rounded-3xl border border-sage-200 shadow-card hover:shadow-soft transition-all overflow-hidden flex flex-col group">
+            <div class="relative aspect-square w-full overflow-hidden bg-sage-100">
+              <img
+                src="${item.image}"
+                alt="${item.name}"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                onerror="handleImageError(this, '${item.image}')"
+              />
+              <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-sage-900 text-[11px] font-bold px-2.5 py-1 rounded-full shadow-xs border border-sage-200/80">
+                ${item.badge}
+              </span>
+              <span class="absolute top-3 right-3 bg-sage-900/80 backdrop-blur-sm text-white text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                ${item.category === 'minuman' ? 'Minuman' : 'Pastry'}
+              </span>
+            </div>
+
+            <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-4">
+              <div>
+                <h3 class="font-serif font-bold text-lg text-sage-900 leading-snug">
+                  ${item.name}
+                </h3>
+                <p class="text-xs sm:text-sm text-sage-700 mt-1.5 leading-relaxed">
+                  ${item.description}
+                </p>
+              </div>
+
+              <div class="flex items-center justify-between gap-3 pt-2 border-t border-sage-100">
+                <div>
+                  <span class="block text-[11px] text-sage-600 font-medium">Harga</span>
+                  <span class="font-serif font-bold text-lg text-sage-900">${formatRupiah(item.price)}</span>
+                </div>
+                <button
+                  type="button"
+                  onclick="openProductModal('${item.id}')"
+                  class="inline-flex items-center gap-1.5 bg-sage-600 hover:bg-sage-700 active:scale-[0.98] text-white font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition-all"
+                >
+                  <span>Pilih Menu</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        `
+        )
+        .join('');
+    }
+
+    // =========================================================================
+    // MODAL KUSTOMISASI MENU
+    // =========================================================================
+    function openProductModal(productId) {
+      const product = MENU_ITEMS.find((p) => p.id === productId);
+      if (!product) return;
+
+      activeModalProduct = product;
+      modalState = {
+        qty: 1,
+        temp: 'Ice',
+        sugar: 'Normal',
+        ice: 'Normal Ice',
+        note: '',
+      };
+
+      const modalImg = document.getElementById('modal-product-image');
+      modalImg.dataset.fallbackApplied = '';
+      modalImg.onerror = function () {
+        handleImageError(this, product.image);
+      };
+      modalImg.src = product.image;
+      modalImg.alt = product.name;
+
+      document.getElementById('modal-product-category').textContent =
+        product.category === 'minuman' ? 'Minuman' : 'Pastry';
+      document.getElementById('modal-product-title').textContent = product.name;
+      document.getElementById('modal-product-price').textContent = formatRupiah(product.price);
+      document.getElementById('modal-product-desc').textContent = product.description;
+
+      const drinkSection = document.getElementById('drink-options-section');
+      const pastrySection = document.getElementById('pastry-options-section');
+      const pastryNoteInput = document.getElementById('pastry-note');
+
+      if (product.category === 'minuman') {
+        drinkSection.classList.remove('hidden');
+        pastrySection.classList.add('hidden');
+        selectTemp('Ice');
+        selectSugar('Normal');
+        selectIce('Normal Ice');
+      } else {
+        drinkSection.classList.add('hidden');
+        pastrySection.classList.remove('hidden');
+        pastryNoteInput.value = '';
+      }
+
+      updateModalQtyDisplay();
+
+      const modal = document.getElementById('product-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById('product-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+      activeModalProduct = null;
+    }
+
+    function selectTemp(temp) {
+      modalState.temp = temp;
+      document.querySelectorAll('.temp-btn').forEach((btn) => {
+        const active = btn.dataset.temp === temp;
+        btn.className = active
+          ? 'temp-btn py-2.5 px-4 rounded-xl border border-sage-600 bg-sage-600 text-white text-sm font-semibold transition-all shadow-xs'
+          : 'temp-btn py-2.5 px-4 rounded-xl border border-sage-200 bg-sage-50 hover:bg-sage-100 text-sage-800 text-sm font-semibold transition-all';
+      });
+
+      const iceWrapper = document.getElementById('ice-level-wrapper');
+      if (temp === 'Ice') {
+        iceWrapper.classList.remove('hidden');
+      } else {
+        iceWrapper.classList.add('hidden');
+      }
+    }
+
+    function selectSugar(sugar) {
+      modalState.sugar = sugar;
+      document.querySelectorAll('.sugar-btn').forEach((btn) => {
+        const active = btn.dataset.sugar === sugar;
+        btn.className = active
+          ? 'sugar-btn py-2.5 px-3 rounded-xl border border-sage-600 bg-sage-600 text-white text-xs sm:text-sm font-semibold transition-all shadow-xs'
+          : 'sugar-btn py-2.5 px-3 rounded-xl border border-sage-200 bg-sage-50 hover:bg-sage-100 text-sage-800 text-xs sm:text-sm font-semibold transition-all';
+      });
+    }
+
+    function selectIce(ice) {
+      modalState.ice = ice;
+      document.querySelectorAll('.ice-btn').forEach((btn) => {
+        const active = btn.dataset.ice === ice;
+        btn.className = active
+          ? 'ice-btn py-2.5 px-2.5 rounded-xl border border-sage-600 bg-sage-600 text-white text-xs sm:text-sm font-semibold transition-all shadow-xs'
+          : 'ice-btn py-2.5 px-2.5 rounded-xl border border-sage-200 bg-sage-50 hover:bg-sage-100 text-sage-800 text-xs sm:text-sm font-semibold transition-all';
+      });
+    }
+
+    function updateModalQty(delta) {
+      modalState.qty = Math.max(1, modalState.qty + delta);
+      updateModalQtyDisplay();
+    }
+
+    function updateModalQtyDisplay() {
+      if (!activeModalProduct) return;
+      document.getElementById('modal-qty').textContent = modalState.qty;
+      document.getElementById('modal-subtotal-btn').textContent = formatRupiah(
+        activeModalProduct.price * modalState.qty
+      );
+    }
+
+    function addToCartFromModal() {
+      if (!activeModalProduct) return;
+
+      const isDrink = activeModalProduct.category === 'minuman';
+      const noteValue = isDrink
+        ? ''
+        : (document.getElementById('pastry-note').value || '').trim();
+
+      const variantKey = isDrink
+        ? `${activeModalProduct.id}|${modalState.temp}|${modalState.sugar}|${modalState.temp === 'Ice' ? modalState.ice : 'NoIce'}`
+        : `${activeModalProduct.id}|${noteValue.toLowerCase()}`;
+
+      const existingIndex = cart.findIndex((item) => item.key === variantKey);
+
+      if (existingIndex > -1) {
+        cart[existingIndex].qty += modalState.qty;
+      } else {
+        cart.push({
+          key: variantKey,
+          id: activeModalProduct.id,
+          name: activeModalProduct.name,
+          category: activeModalProduct.category,
+          price: activeModalProduct.price,
+          image: activeModalProduct.image,
+          qty: modalState.qty,
+          temp: isDrink ? modalState.temp : null,
+          sugar: isDrink ? modalState.sugar : null,
+          ice: isDrink && modalState.temp === 'Ice' ? modalState.ice : null,
+          note: noteValue,
+        });
+      }
+
+      const addedName = activeModalProduct.name;
+      closeProductModal();
+      renderCart();
+      hideCheckoutError();
+      showToast(`${addedName} ditambahkan ke keranjang!`);
+    }
+
+    // =========================================================================
+    // KALKULASI & RENDER KERANJANG
+    // =========================================================================
+    function calculateTotals() {
+      const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const hasDiscount = subtotal >= BUSINESS_CONFIG.promoThreshold;
+      const discount = hasDiscount
+        ? Math.round(subtotal * BUSINESS_CONFIG.discountRate)
+        : 0;
+      const serviceFee = totalItems > 0 ? BUSINESS_CONFIG.serviceFee : 0;
+      const total = Math.max(0, subtotal - discount + serviceFee);
+
+      return { subtotal, totalItems, hasDiscount, discount, serviceFee, total };
+    }
+
+    function formatVariantLabel(item) {
+      if (item.category === 'minuman') {
+        const parts = [`Suhu: ${item.temp}`, `Gula: ${item.sugar}`];
+        if (item.temp === 'Ice' && item.ice) {
+          parts.push(`Es: ${item.ice}`);
+        }
+        return parts.join(' • ');
+      }
+      return item.note ? `Catatan: ${item.note}` : 'Pastry hangat';
+    }
+
+    function updateCartItemQty(index, delta) {
+      if (!cart[index]) return;
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        const removedName = cart[index].name;
+        cart.splice(index, 1);
+        showToast(`${removedName} dihapus dari keranjang.`);
+      }
+      renderCart();
+    }
+
+    function removeCartItem(index) {
+      if (!cart[index]) return;
+      const removedName = cart[index].name;
+      cart.splice(index, 1);
+      renderCart();
+      showToast(`${removedName} dihapus dari keranjang.`);
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items-container');
+      const { subtotal, totalItems, hasDiscount, discount, serviceFee, total } =
+        calculateTotals();
+
+      // Update badge navbar & header keranjang
+      document.getElementById('nav-cart-badge').textContent = totalItems;
+      document.getElementById('cart-item-count-label').textContent = `${totalItems} item`;
+
+      // Update Sticky Mobile WhatsApp Bar
+      const mobileStatus = document.getElementById('mobile-bar-status');
+      const mobileTotal = document.getElementById('mobile-bar-total');
+      if (mobileStatus && mobileTotal) {
+        if (totalItems === 0) {
+          mobileStatus.textContent = 'Keranjang kosong';
+          mobileTotal.textContent = 'Rp0';
+        } else {
+          mobileStatus.textContent = hasDiscount
+            ? `${totalItems} item • Diskon 5% aktif`
+            : `${totalItems} item di keranjang`;
+          mobileTotal.textContent = formatRupiah(total);
+        }
+      }
+
+      // Render daftar item keranjang
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-8 px-4 rounded-2xl bg-sage-50 border border-dashed border-sage-200">
+            <div class="w-12 h-12 mx-auto rounded-2xl bg-white border border-sage-200 text-sage-500 flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+              </svg>
+            </div>
+            <p class="text-sm font-bold text-sage-900">Keranjang masih kosong</p>
+            <p class="text-xs text-sage-600 mt-1">Pilih kopi atau pastry favorit Anda dari katalog menu.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = cart
+          .map(
+            (item, idx) => `
+            <div class="flex items-start gap-3 p-3 rounded-2xl bg-sage-50 border border-sage-200/80">
+              <div class="w-14 h-14 rounded-xl overflow-hidden bg-sage-100 border border-sage-200 shrink-0">
+                <img
+                  src="${item.image}"
+                  alt="${item.name}"
+                  class="w-full h-full object-cover object-center"
+                  onerror="handleImageError(this, '${item.image}')"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between gap-2">
+                  <h4 class="font-bold text-xs sm:text-sm text-sage-900 leading-snug truncate">${item.name}</h4>
+                  <button
+                    type="button"
+                    onclick="removeCartItem(${idx})"
+                    aria-label="Hapus item"
+                    class="text-sage-400 hover:text-red-600 transition-colors p-0.5 shrink-0"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 6h18" />
+                      <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                      <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                    </svg>
+                  </button>
+                </div>
+                <p class="text-[11px] text-sage-600 mt-0.5 leading-snug">${formatVariantLabel(item)}</p>
+                <div class="flex items-center justify-between gap-2 mt-2">
+                  <span class="font-bold text-xs sm:text-sm text-sage-900">${formatRupiah(item.price * item.qty)}</span>
+                  <div class="inline-flex items-center gap-1.5 bg-white border border-sage-200 rounded-lg p-0.5">
+                    <button
+                      type="button"
+                      onclick="updateCartItemQty(${idx}, -1)"
+                      class="w-6 h-6 rounded-md hover:bg-sage-100 text-sage-800 font-bold text-sm flex items-center justify-center"
+                      aria-label="Kurangi jumlah"
+                    >&minus;</button>
+                    <span class="w-5 text-center text-xs font-bold text-sage-900">${item.qty}</span>
+                    <button
+                      type="button"
+                      onclick="updateCartItemQty(${idx}, 1)"
+                      class="w-6 h-6 rounded-md bg-sage-600 hover:bg-sage-700 text-white font-bold text-sm flex items-center justify-center"
+                      aria-label="Tambah jumlah"
+                    >+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+          )
+          .join('');
+      }
+
       // Update indikator promo 5%
       const promoBox = document.getElementById('promo-status-box');
       const promoText = document.getElementById('promo-status-text');
@@ -1030,11 +1475,150 @@
           'h-full bg-sage-500 rounded-full transition-all duration-300';
         promoIcon.className = 'mt-0.5 text-sage-600 shrink-0';
       }
-// ... existing code ... -->
+
+      // Update ringkasan harga
+      document.getElementById('summary-subtotal').textContent = formatRupiah(subtotal);
+      document.getElementById('summary-service-fee').textContent = formatRupiah(serviceFee);
+      document.getElementById('summary-total').textContent = formatRupiah(total);
+
+      const discountRow = document.getElementById('summary-discount-row');
+      if (hasDiscount) {
+        discountRow.classList.remove('hidden');
+        discountRow.classList.add('flex');
+        document.getElementById('summary-discount').textContent = `-${formatRupiah(discount)}`;
+      } else {
+        discountRow.classList.add('hidden');
+        discountRow.classList.remove('flex');
+      }
+    }
+
+    // =========================================================================
+    // FORM PEMESANAN & CHECKOUT WHATSAPP
+    // =========================================================================
+    function getSelectedDeliveryMethod() {
+      const checked = document.querySelector('input[name="deliveryMethod"]:checked');
+      return checked ? checked.value : 'Pickup di Toko';
+    }
+
+    function toggleDeliveryAddress() {
+      const method = getSelectedDeliveryMethod();
+      const addressWrapper = document.getElementById('address-wrapper');
+      if (method.includes('Antar ke Rumah')) {
+        addressWrapper.classList.remove('hidden');
+      } else {
+        addressWrapper.classList.add('hidden');
+        document.getElementById('error-address').classList.add('hidden');
+      }
+    }
+
+    function showCheckoutError(message) {
+      const banner = document.getElementById('checkout-error-banner');
+      const text = document.getElementById('checkout-error-text');
+      text.textContent = message;
+      banner.classList.remove('hidden');
+    }
+
+    function hideCheckoutError() {
+      document.getElementById('checkout-error-banner').classList.add('hidden');
+      document.getElementById('error-name').classList.add('hidden');
+      document.getElementById('error-address').classList.add('hidden');
+    }
+
+    function processWhatsAppCheckout(fromMobileBar = false) {
+      hideCheckoutError();
+
+      if (cart.length === 0) {
+        showCheckoutError('Keranjang masih kosong. Silakan pilih menu terlebih dahulu.');
+        if (fromMobileBar) {
+          document.getElementById('katalog-menu').scrollIntoView({ behavior: 'smooth' });
+          showToast('Silakan pilih menu terlebih dahulu.');
+        }
+        return;
+      }
+
+      const nameInput = document.getElementById('customer-name');
+      const addressInput = document.getElementById('customer-address');
+      const customerName = nameInput.value.trim();
+      const deliveryMethod = getSelectedDeliveryMethod();
+      const isDelivery = deliveryMethod.includes('Antar ke Rumah');
+      const customerAddress = addressInput.value.trim();
+
+      let hasError = false;
+      let firstInvalidEl = null;
+
+      if (!customerName) {
+        const errName = document.getElementById('error-name');
+        errName.textContent = 'Nama pemesan wajib diisi.';
+        errName.classList.remove('hidden');
+        hasError = true;
+        firstInvalidEl = nameInput;
+      }
+
+      if (isDelivery && !customerAddress) {
+        const errAddr = document.getElementById('error-address');
+        errAddr.textContent = 'Alamat lengkap & patokan wajib diisi untuk pengantaran.';
+        errAddr.classList.remove('hidden');
+        hasError = true;
+        if (!firstInvalidEl) firstInvalidEl = addressInput;
+      }
+
+      if (hasError) {
+        showCheckoutError('Mohon lengkapi data pemesan yang masih kosong.');
+        if (fromMobileBar || firstInvalidEl) {
+          document.getElementById('checkout-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(() => {
+            if (firstInvalidEl) firstInvalidEl.focus();
+          }, 350);
+        }
+        return;
+      }
+
+      const { subtotal, hasDiscount, discount, serviceFee, total } = calculateTotals();
+
+      const itemLines = cart.map((item, i) => {
+        const lineTotal = formatRupiah(item.price * item.qty);
+        const variantDetail = formatVariantLabel(item);
+        return `${i + 1}. *${item.name}* (${item.qty}x) — ${lineTotal}\n   _${variantDetail}_`;
+      });
+
+      const messageParts = [
+        `Halo *${BUSINESS_CONFIG.brandName}*! Saya ingin memesan:`,
+        '',
+        `*Nama Pemesan:* ${customerName}`,
+        `*Metode Pengambilan:* ${deliveryMethod}`,
+      ];
+
+      if (isDelivery) {
+        messageParts.push(`*Alamat & Patokan:* ${customerAddress}`);
+      }
+
+      messageParts.push(
+        '',
+        '*Daftar Pesanan:*',
+        ...itemLines,
+        '',
+        '*Rincian Pembayaran:*',
+        `• Subtotal: ${formatRupiah(subtotal)}`
+      );
+
       if (hasDiscount) {
         messageParts.push(`• Diskon Promo (5%): -${formatRupiah(discount)}`);
       }
-// ... existing code ... -->
+
+      messageParts.push(
+        `• Biaya Layanan: ${formatRupiah(serviceFee)}`,
+        `• *Total Estimasi:* *${formatRupiah(total)}* _(belum termasuk ongkir)_`,
+        '',
+        'Mohon dikonfirmasi ya Kak. Terima kasih!'
+      );
+
+      const waUrl = `https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+        messageParts.join('\n')
+      )}`;
+
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
     function handleMobileStickyWhatsAppClick() {
       processWhatsAppCheckout(true);
     }
@@ -1049,4 +1633,37 @@
       }, 2200);
       showToast('Belanja minimal Rp30.000 otomatis dapat Diskon 5%!');
     }
-// ... existing code ... -->
+
+    // =========================================================================
+    // INISIALISASI HALAMAN
+    // =========================================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+      // Render awal katalog & keranjang
+      renderMenuCatalog();
+      renderCart();
+      toggleDeliveryAddress();
+
+      // Event submit form checkout
+      const form = document.getElementById('checkout-form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        processWhatsAppCheckout(false);
+      });
+
+      // Tutup modal saat klik area backdrop atau tekan tombol Escape
+      const modal = document.getElementById('product-modal');
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeProductModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && activeModalProduct) {
+          closeProductModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
